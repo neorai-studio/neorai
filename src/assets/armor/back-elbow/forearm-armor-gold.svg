@@ -1,0 +1,49 @@
+<svg width="130" height="280" viewBox="0 0 130 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .fill { fill: #f7da08; fill-opacity: 0.15; }
+      .line { fill: none; stroke: #f7da08; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; filter: url(#glow-gold); }
+    </style>
+  </defs>
+
+  <path class="fill" d="
+    M 52 14
+    C 38 14, 28 20, 22 32
+    C 16 44, 18 62, 22 80
+    C 26 100, 28 122, 26 142
+    C 24 162, 18 182, 20 205
+    C 22 222, 28 240, 38 255
+    C 46 266, 54 272, 62 274
+    C 70 274, 78 268, 86 256
+    C 96 240, 104 222, 108 202
+    C 110 180, 104 158, 102 138
+    C 100 118, 104 98, 108 78
+    C 112 58, 114 40, 108 28
+    C 102 18, 90 13, 76 13
+    C 66 12, 58 12, 52 14
+    Z
+  "/>
+
+  <path class="line" d="
+    M 52 14
+    C 38 14, 28 20, 22 32
+    C 16 44, 18 62, 22 80
+    C 26 100, 28 122, 26 142
+    C 24 162, 18 182, 20 205
+    C 22 222, 28 240, 38 255
+    C 46 266, 54 272, 62 274
+    C 70 274, 78 268, 86 256
+    C 96 240, 104 222, 108 202
+    C 110 180, 104 158, 102 138
+    C 100 118, 104 98, 108 78
+    C 112 58, 114 40, 108 28
+    C 102 18, 90 13, 76 13
+    C 66 12, 58 12, 52 14
+    Z
+  "/>
+
+</svg>

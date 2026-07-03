@@ -1,0 +1,29 @@
+<svg width="320" height="460" viewBox="100 85 320 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fill -->
+  <path fill="#f7da08" fill-opacity="0.15" stroke="none" d="M 195 130 C 175 138, 155 150, 145 165 C 130 185, 128 205, 130 225 C 132 245, 140 260, 148 275 C 152 290, 152 305, 148 320 C 144 340, 138 360, 138 380 C 138 410, 145 440, 155 460 C 162 475, 172 485, 185 490 C 200 496, 220 498, 240 498 L 290 498 C 310 498, 330 497, 345 492 C 360 487, 372 478, 380 465 C 392 445, 398 415, 398 385 C 398 360, 392 340, 388 320 C 384 305, 384 290, 388 275 C 396 260, 404 245, 406 225 C 408 205, 406 185, 391 165 C 381 150, 361 138, 341 130 C 316 118, 296 112, 268 111 C 240 112, 220 118, 195 130 Z"/>
+
+  <!-- Outline -->
+  <path fill="none" stroke="#f7da08" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-gold)" d="M 195 130 C 175 138, 155 150, 145 165 C 130 185, 128 205, 130 225 C 132 245, 140 260, 148 275 C 152 290, 152 305, 148 320 C 144 340, 138 360, 138 380 C 138 410, 145 440, 155 460 C 162 475, 172 485, 185 490 C 200 496, 220 498, 240 498 L 290 498 C 310 498, 330 497, 345 492 C 360 487, 372 478, 380 465 C 392 445, 398 415, 398 385 C 398 360, 392 340, 388 320 C 384 305, 384 290, 388 275 C 396 260, 404 245, 406 225 C 408 205, 406 185, 391 165 C 381 150, 361 138, 341 130 C 316 118, 296 112, 268 111 C 240 112, 220 118, 195 130 Z"/>
+
+  <!-- Chest divider -->
+  <path fill="none" stroke="#f7da08" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-gold)" d="M 148 275 C 172 268, 210 264, 268 263 C 326 264, 364 268, 388 275"/>
+
+  <!-- Waist divider -->
+  <path fill="none" stroke="#f7da08" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow-gold)" d="M 138 380 C 165 372, 210 368, 268 367 C 326 368, 371 372, 398 380"/>
+
+  <!-- Top section dashes -->
+  <line x1="258" y1="200" x2="266" y2="200" fill="none" stroke="#f7da08" stroke-width="4" stroke-linecap="round"/>
+  <line x1="274" y1="200" x2="282" y2="200" fill="none" stroke="#f7da08" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Bottom section dashes -->
+  <line x1="258" y1="430" x2="266" y2="430" fill="none" stroke="#f7da08" stroke-width="4" stroke-linecap="round"/>
+  <line x1="274" y1="430" x2="282" y2="430" fill="none" stroke="#f7da08" stroke-width="4" stroke-linecap="round"/>
+
+</svg>

@@ -1,0 +1,52 @@
+<svg width="80" height="280" viewBox="0 0 80 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-gold" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .fill { fill: #f7da08; fill-opacity: 0.15; }
+      .line { fill: none; stroke: #f7da08; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; filter: url(#glow-gold); }
+    </style>
+  </defs>
+
+  <path class="fill" d="
+    M 33 14
+    C 24 14, 16 20, 12 32
+    C 8 44, 8 62, 10 80
+    C 12 100, 4 122, 4 142
+    C 4 162, 8 182, 10 205
+    C 12 222, 17 240, 25 255
+    C 31 266, 37 272, 42 274
+    C 47 274, 53 268, 59 256
+    C 67 240, 71 222, 73 202
+    C 75 180, 70 158, 68 138
+    C 66 118, 69 98, 72 78
+    C 75 58, 76 40, 71 28
+    C 66 18, 57 13, 48 13
+    C 42 12, 36 12, 33 14
+    Z
+  "/>
+
+  <path class="line" d="
+    M 33 14
+    C 24 14, 16 20, 12 32
+    C 8 44, 8 62, 10 80
+    C 12 100, 4 122, 4 142
+    C 4 162, 8 182, 10 205
+    C 12 222, 17 240, 25 255
+    C 31 266, 37 272, 42 274
+    C 47 274, 53 268, 59 256
+    C 67 240, 71 222, 73 202
+    C 75 180, 70 158, 68 138
+    C 66 118, 69 98, 72 78
+    C 75 58, 76 40, 71 28
+    C 66 18, 57 13, 48 13
+    C 42 12, 36 12, 33 14
+    Z
+  "/>
+
+  <!-- Concave vertical stripe flowing with the shape -->
+  <path class="line" d="M 30 80 C 24 105, 20 130, 22 155 C 24 178, 28 200, 33 218"/>
+
+</svg>

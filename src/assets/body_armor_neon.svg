@@ -1,0 +1,30 @@
+<svg width="100%" viewBox="100 85 320 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+  </defs>
+
+  <!-- Fill FIRST (bottom layer) -->
+  <path fill="#999999" fill-opacity="0.25" stroke="none" d="&#10;    M 195 130&#10;    C 175 138, 155 150, 145 165&#10;    C 130 185, 128 205, 130 225&#10;    C 132 245, 140 260, 148 275&#10;    C 152 290, 152 305, 148 320&#10;    C 144 340, 138 360, 138 380&#10;    C 138 410, 145 440, 155 460&#10;    C 162 475, 172 485, 185 490&#10;    C 200 496, 220 498, 240 498&#10;    L 290 498&#10;    C 310 498, 330 497, 345 492&#10;    C 360 487, 372 478, 380 465&#10;    C 392 445, 398 415, 398 385&#10;    C 398 360, 392 340, 388 320&#10;    C 384 305, 384 290, 388 275&#10;    C 396 260, 404 245, 406 225&#10;    C 408 205, 406 185, 391 165&#10;    C 381 150, 361 138, 341 130&#10;    C 316 118, 296 112, 268 111&#10;    C 240 112, 220 118, 195 130&#10;    Z&#10;  " style="fill:rgb(153, 153, 153);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Outline -->
+  <path d="&#10;    M 195 130&#10;    C 175 138, 155 150, 145 165&#10;    C 130 185, 128 205, 130 225&#10;    C 132 245, 140 260, 148 275&#10;    C 152 290, 152 305, 148 320&#10;    C 144 340, 138 360, 138 380&#10;    C 138 410, 145 440, 155 460&#10;    C 162 475, 172 485, 185 490&#10;    C 200 496, 220 498, 240 498&#10;    L 290 498&#10;    C 310 498, 330 497, 345 492&#10;    C 360 487, 372 478, 380 465&#10;    C 392 445, 398 415, 398 385&#10;    C 398 360, 392 340, 388 320&#10;    C 384 305, 384 290, 388 275&#10;    C 396 260, 404 245, 406 225&#10;    C 408 205, 406 185, 391 165&#10;    C 381 150, 361 138, 341 130&#10;    C 316 118, 296 112, 268 111&#10;    C 240 112, 220 118, 195 130&#10;    Z&#10;  " style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Chest divider -->
+  <path d="M 148 275 C 172 268, 210 264, 268 263 C 326 264, 364 268, 388 275" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Waist divider -->
+  <path d="M 138 380 C 165 372, 210 368, 268 367 C 326 368, 371 372, 398 380" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:round;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Top section dashes LAST (top layer) -->
+  <line x1="255" y1="200" x2="265" y2="200" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:3.5px;stroke-dasharray:8px, 5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="271" y1="200" x2="281" y2="200" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:3.5px;stroke-dasharray:8px, 5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Bottom section dashes LAST (top layer) -->
+  <line x1="255" y1="430" x2="265" y2="430" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:3.5px;stroke-dasharray:8px, 5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="271" y1="430" x2="281" y2="430" style="fill:none;stroke:rgb(153, 153, 153);color:rgb(0, 0, 0);stroke-width:3.5px;stroke-dasharray:8px, 5px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</svg>
