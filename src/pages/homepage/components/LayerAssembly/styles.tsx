@@ -55,15 +55,17 @@ export const ContentGrid = styled("div")(({ theme }) => ({
 }));
 
 // ── Copy (left side) ──
-export const CopyWrapper = styled("div")<{ $inView: boolean }>(({ $inView }) => ({
-	opacity: $inView ? 1 : 0,
-	transform: $inView ? "translateY(0)" : "translateY(20px)",
-	transition: "opacity 0.8s ease, transform 0.8s ease",
+export const CopyWrapper = styled("div")<{ $inView: boolean }>(
+	({ $inView }) => ({
+		opacity: $inView ? 1 : 0,
+		transform: $inView ? "translateY(0)" : "translateY(20px)",
+		transition: "opacity 0.8s ease, transform 0.8s ease",
 
-	"@media (prefers-reduced-motion: reduce)": {
-		transition: "none",
-	},
-}));
+		"@media (prefers-reduced-motion: reduce)": {
+			transition: "none",
+		},
+	}),
+);
 
 export const Eyebrow = styled("div")({
 	display: "flex",
@@ -192,10 +194,11 @@ export const HintText = styled("div")({
 // ── Stack Stage (right side) ──
 export const StackStageWrapper = styled("div")(({ theme }) => ({
 	position: "relative",
-	height: 580,
+	height: 800,
 	display: "flex",
-	alignItems: "center",
+	alignItems: "flex-start",
 	justifyContent: "center",
+	paddingTop: "40px",
 
 	[theme.breakpoints.down("md")]: {
 		height: "auto",
@@ -203,20 +206,22 @@ export const StackStageWrapper = styled("div")(({ theme }) => ({
 	},
 }));
 
-export const StackRing = styled("div")<{ $variant?: "secondary" }>(({ $variant }) => ({
-	position: "absolute",
-	width: $variant === "secondary" ? 560 : 480,
-	height: $variant === "secondary" ? 560 : 480,
-	border: `1px dashed ${$variant === "secondary" ? "rgba(232,163,61,.09)" : "rgba(232,163,61,.18)"}`,
-	borderRadius: "50%",
-	animation: `${ringSpin} ${$variant === "secondary" ? "60s" : "40s"} linear infinite`,
-	animationDirection: $variant === "secondary" ? "reverse" : "normal",
-	pointerEvents: "none",
+export const StackRing = styled("div")<{ $variant?: "secondary" }>(
+	({ $variant }) => ({
+		position: "absolute",
+		width: $variant === "secondary" ? 560 : 480,
+		height: $variant === "secondary" ? 560 : 480,
+		border: `1px dashed ${$variant === "secondary" ? "rgba(232,163,61,.09)" : "rgba(232,163,61,.18)"}`,
+		borderRadius: "50%",
+		animation: `${ringSpin} ${$variant === "secondary" ? "60s" : "40s"} linear infinite`,
+		animationDirection: $variant === "secondary" ? "reverse" : "normal",
+		pointerEvents: "none",
 
-	"@media (prefers-reduced-motion: reduce)": {
-		animation: "none",
-	},
-}));
+		"@media (prefers-reduced-motion: reduce)": {
+			animation: "none",
+		},
+	}),
+);
 
 export const Particle = styled("div")<{
 	$left: string;
@@ -248,19 +253,22 @@ const CARD_BACKGROUNDS = [
 	"linear-gradient(135deg, #161412, #111010)",
 ];
 
-export const LayerStackWrapper = styled("div")<{ $exploded: boolean }>(
-	({ $exploded, theme }) => ({
-		position: "relative",
-		width: 420,
-		height: $exploded ? 560 : 280,
-		transition: "height 0.6s cubic-bezier(.4,0,.2,1)",
+export const LayerStackWrapper = styled("div")(({ theme }) => ({
+	position: "relative",
+	width: "30rem",
+	height: 700,
 
-		[theme.breakpoints.down("md")]: {
-			width: "100%",
-			maxWidth: 420,
-		},
-	}),
-);
+	[theme.breakpoints.down("md")]: {
+		width: "90%",
+		maxWidth: 420,
+		height: 710,
+	},
+
+	[theme.breakpoints.down("sm")]: {
+		width: "95%",
+		height: 710,
+	},
+}));
 
 export const LayerCard = styled("div")<{
 	$revealed: boolean;
@@ -270,18 +278,19 @@ export const LayerCard = styled("div")<{
 }>(({ $revealed, $highlight, $layerIndex, $exploded, theme }) => ({
 	position: "absolute",
 	left: 0,
-	width: 420,
-	height: 110,
+	width: "80%",
+	minHeight: "8rem",
+	height: "fit-content",
 	borderRadius: 10,
 	border: `1px solid ${$highlight ? "#e8a33d" : "#2a2622"}`,
 	display: "flex",
 	alignItems: "center",
-	padding: "0 28px",
+	padding: "0 10%",
 	gap: 20,
 	backdropFilter: "blur(4px)",
 	background: CARD_BACKGROUNDS[$layerIndex] || CARD_BACKGROUNDS[0],
 	zIndex: 4 - $layerIndex,
-	top: $exploded ? $layerIndex * 140 : $layerIndex * 30,
+	top: $layerIndex * 150 + 24,
 	opacity: $revealed ? 1 : 0,
 	transform: $revealed
 		? "translateX(0) rotate(0deg)"
@@ -300,19 +309,28 @@ export const LayerCard = styled("div")<{
 	},
 
 	[theme.breakpoints.down("md")]: {
-		width: "100%",
+		width: "80%",
+	},
+
+	[theme.breakpoints.down("sm")]: {
+		width: "90%",
+		minHeight: "11rem",
+		padding: "0 8%",
+		top: $exploded ? $layerIndex * 200 : $layerIndex * 38 + 24,
 	},
 }));
 
-export const LayerNum = styled("span")<{ $highlight: boolean }>(({ $highlight }) => ({
-	fontFamily: "'Oswald', sans-serif",
-	fontSize: 28,
-	color: "#e8a33d",
-	opacity: $highlight ? 1 : 0.5,
-	width: 32,
-	flexShrink: 0,
-	transition: "opacity 0.3s ease",
-}));
+export const LayerNum = styled("span")<{ $highlight: boolean }>(
+	({ $highlight }) => ({
+		fontFamily: "'Oswald', sans-serif",
+		fontSize: 28,
+		color: "#e8a33d",
+		opacity: $highlight ? 1 : 0.5,
+		width: 32,
+		flexShrink: 0,
+		transition: "opacity 0.3s ease",
+	}),
+);
 
 export const LayerInfo = styled("span")({
 	display: "flex",

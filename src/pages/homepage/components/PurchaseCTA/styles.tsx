@@ -18,7 +18,6 @@ const gentlePulse = keyframes`
   }
 `;
 
-
 /* ═══ Section container ═══ */
 
 export const CTASection = styled("section")(({ theme }) => ({
@@ -34,7 +33,7 @@ export const CTASection = styled("section")(({ theme }) => ({
 	},
 	[theme.breakpoints.down("md")]: {
 		flexDirection: "column",
-		padding: "3rem 1.5rem",
+		padding: "0 0 2rem 0",
 		minHeight: "auto",
 		gap: "3rem",
 	},
@@ -158,7 +157,8 @@ export const BuyButton = styled("a")({
 		left: 0,
 		width: "200%",
 		height: "100%",
-		background: "linear-gradient(to right, transparent, rgba(255, 255, 255, 0.45), transparent)",
+		background:
+			"linear-gradient(to right, transparent, rgba(255, 255, 255, 0.45), transparent)",
 		transform: "translateX(-150%) skewX(-25deg)",
 		animation: `${shimmer} 3.5s infinite ease-in-out`,
 		pointerEvents: "none",
