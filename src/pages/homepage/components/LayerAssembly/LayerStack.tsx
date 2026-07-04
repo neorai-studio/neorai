@@ -22,7 +22,7 @@ const LayerStack = ({
 	onCardHover,
 }: LayerStackProps) => {
 	return (
-		<LayerStackWrapper $exploded={exploded}>
+		<LayerStackWrapper>
 			{LAYERS.map((layer) => (
 				<LayerCard
 					key={layer.index}
